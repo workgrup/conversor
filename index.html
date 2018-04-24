@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>CONVERTIDOR DE DIVISAS</title>
+</head>
+
+<body>
+
+	<form name="conversor">
+		<br>
+		De pesos a Dolares<input type="text" id="cop">
+		<input type="button" value="convertir" onclick="conv_usd(document.getElementById('cop').value)">
+			<br>
+		De Dolares a pesos<input type="text" id="usd">
+		<input type="button" value="convertir" onclick="conv_cop(document.getElementById('usd').value)">
+			<br>
+		De pesos a Yenes<input type="text" id="cop">
+		<input type="button" value="convertir" onclick="conv_yen(document.getElementById('cop').value)">
+			<br>
+		De yenes a Pesos<input type="text" id="yen">
+		<input type="button" value="convertir" onclick="conv_copc(document.getElementById('yen').value)">
+			<br>
+		De pesos a Real brasileño<input type="text" id="cop">
+		 <input type="button" value="convertir" onclick="conv_real(document.getElementById('cop').value)">
+			<br>
+		De real brsileño a Pesos<input type="text" id="cop">
+		<input type="button" value="convertir" onclick="conver_cop(document.getElementById('cop').value)">
+
+
+
+
+	</form>
+	<script type="text/javascript">
+		function conv_usd(cop){
+			numero=/[0-9\.]$/
+			if (!numero.exec(cop)) {
+				alert("esto no es un numero");
+			}else{
+				usd=2.784;
+				resultado=cop/usd;
+				document.getElementById("result").innerHTML= "usd  " + resultado.toFixed(2);
+			}
+
+			
+		}
+		function conv_cop(cop){
+			numero=/[0-9\.]$/
+			if (!numero.exec(cop)) {
+				alert("esto no es un numero");
+			}else{
+				usd=2.784;
+				resultado=cop*usd;
+				document.getElementById("result1").innerHTML= "cop " + resultado.toFixed(2);
+			}
+
+			
+		}
+		function conv_yen(cop){
+			numero=/[0-9\.]$/
+			if (!numero.exec(cop)) {
+				alert("esto no es un numero");
+			}else{
+				yen=25.1;
+				resultado=cop*yen;
+				document.getElementById("result2").innerHTML= "yen  " + resultado.toFixed(2);
+			}
+
+			
+		}
+		function conv_copc(cop){
+			numero=/[0-9\.]$/
+			if (!numero.exec(cop)) {
+				alert("esto no es un numero");
+			}else{
+				yenes=25.1;
+				resultado=cop/yen;
+				document.getElementById("result3").innerHTML= "copc  " + resultado.toFixed(2);
+			}
+
+			
+		}
+		function conv_real(cop){
+			numero=/[0-9\.]$/
+			if (!numero.exec(cop)) {
+				alert("esto no es un numero");
+			}else{
+				real=789;
+				resultado=cop*real;
+				document.getElementById("result4").innerHTML= "real  " + resultado.toFixed(2);
+			}
+
+			
+		}
+		function conver_cop(cop){
+			numero=/[0-9\.]$/
+			if (!numero.exec(cop)) {
+				alert("esto no es un numero");
+			}else{
+				real=789;
+				resultado=cop/real;
+				document.getElementById("result5").innerHTML= "pesoc  " + resultado.toFixed(2);
+			}
+
+			
+		}
+	</script>
+	<div id="result"></div>
+	<div id="result1"></div>
+	<div id="result2"></div>
+	<div id="result3"></div>
+	<div id="result4"></div>
+	<div id="result5"></div>
+    <div class="app">
+        
+</body>
+
+</html>
